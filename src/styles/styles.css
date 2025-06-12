@@ -1,0 +1,30 @@
+.header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .products-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .products-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .products-container li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }

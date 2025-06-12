@@ -1,0 +1,587 @@
+
+.roles-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  background-color: #eaf4f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.roles-container h2 {
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.roles-container .add-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.roles-container .add-button:hover {
+  background-color: #5D7C75;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.role-table th {
+  background-color: #85A89E;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.role-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #34495e;
+  vertical-align: middle;
+}
+
+.role-table tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.edit-button:hover {
+  color: #6B8F89;
+}
+
+.delete-button:hover {
+  color: #e74c3c;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.modal > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #6B8F89;
+}
+
+.modal input,
+.modal select {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto 0.75rem;
+  padding: 0.4rem 0.86em;
+  border: 1px solid #a8b9b3;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f1f5f3;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal input:focus,
+.modal select:focus {
+  border-color: #85A89E;
+}
+
+.modal .error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal button.primary {
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+
+.modal button.primary:hover {
+  background-color: #5D7C75;
+}
+
+.modal button.secondary {
+  background-color: #c0c0c0;
+  color: #34495e;
+}
+
+.modal button.secondary:hover {
+  background-color: #a8a8a8;
+}
+
+.role-table th,
+.role-table td {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.role-table th {
+  font-weight: 600;
+}
+
+.role-table td {
+  vertical-align: middle;
+  line-height: 1.1;
+}
+
+.roles-container {
+  padding: 1rem;
+}
+
+.edit-button,
+.delete-button {
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.roles-container .add-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
+
+.modalRol-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modalRol {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalRol > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalRol h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+.close-button:hover {
+  color: #333;
+}
+
+.modalRol input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.modalRol input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.modalRol h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  user-select: none;
+  cursor: pointer;
+}
+.checkbox-wrapper input[type="checkbox"] {
+  margin-left: 8px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.primary:hover {
+  background-color: #0056b3;
+}
+
+.secondary {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.secondary:hover {
+  background-color: #cfcfcf;
+}
+
+.roles-container {
+  padding: 20px;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+.add-button:hover {
+  background-color: #1e7e34;
+}
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.role-table th,
+.role-table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+}
+.role-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  color: #555;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  color: #555;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.edit-button:hover {
+  background-color: #d6eaff;
+  color: #007bff;
+}
+.delete-button:hover {
+  background-color: #ffd6d6;
+  color: #dc3545;
+}
+
+
+@media (max-width: 780px) {
+  .roles-container {
+    background-color: #d6e9e5;
+  }
+
+  .role-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .role-table,
+  .role-table tbody,
+  .role-table tr,
+  .role-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .role-table thead {
+    display: none;
+  }
+
+  .role-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .role-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .role-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .role-table td:last-child {
+    border-bottom: none;
+  }
+
+  .role-table td[data-label="Acciones"] {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding-left: 50%;
+    border-bottom: none;
+  }
+
+  .modalRol {
+    width: 90%;
+    padding: 20px;
+    max-height: 85vh;
+  }
+
+  .modalRol > div:first-child h2 {
+    font-size: 1.25rem;
+  }
+
+  .modalRol input[type="text"] {
+    font-size: 0.95rem;
+  }
+
+  .checkbox-wrapper {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .secondary {
+    margin-left: 0 !important;
+  }
+
+  .modalRol h3 {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .modalRol input[type="text"] {
+    width: 80%; 
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  .roles-container {
+    background-color: #d6e9e5;
+  }
+
+  .role-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .role-table,
+  .role-table tbody,
+  .role-table tr,
+  .role-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .role-table thead {
+    display: none;
+  }
+
+  .role-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .role-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+
+  .role-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .role-table td:last-child {
+    border-bottom: none;
+  }
+
+  .role-table td[data-label="Acciones"] {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding-left: 50%;
+    border-bottom: none;
+  }
+  .modalRol {
+    padding: 15px;
+  }
+
+  .close-button {
+    font-size: 24px;
+  }
+
+  .modalRol > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modalRol > div:first-child h2 {
+    margin-bottom: 10px;
+  }
+
+}

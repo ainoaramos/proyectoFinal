@@ -1,0 +1,561 @@
+/* Suppliers.css */
+
+/* Contenedor principal */
+.suppliers-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  background-color: #eaf4f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+
+.suppliers-container h2 {
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botón Agregar Proveedor */
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-button:hover {
+  background-color: #5D7C75;
+}
+
+/* Tabla de proveedores */
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.supplier-table th {
+  background-color: #85A89E;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.supplier-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #34495e;
+  vertical-align: middle;
+}
+
+.supplier-table tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+/* Botones de acción */
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.edit-button:hover {
+  color: #6B8F89;
+}
+
+.delete-button:hover {
+  color: #e74c3c;
+}
+
+/* Overlay genérico para modales */
+.modalProveedor-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenido del modal */
+.modalProveedor {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+/* Cabecera del modal */
+.modalProveedor > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modalProveedor h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 1.5rem;
+}
+
+/* Botón de cerrar */
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #6B8F89;
+}
+
+/* Inputs dentro del modal */
+.modalProveedor input {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto 0.75rem;   
+  padding: 0.4rem 0.86em;
+  margin-bottom: 0.5rem;
+  border: 1px solid #a8b9b3;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f1f5f3;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modalProveedor input:focus {
+  border-color: #85A89E;
+}
+
+/* Botones principales del modal */
+.modalProveedor button.primary {
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  margin-right: 0.5rem;
+}
+
+.modalProveedor button.primary:hover {
+  background-color: #5D7C75;
+}
+
+/* Botón cancelar */
+.modalProveedor button.secondary {
+  background-color: #c0c0c0;
+  color: #34495e;
+}
+
+.modalProveedor button.secondary:hover {
+  background-color: #a8a8a8;
+}
+
+/* Responsive */
+/* Suppliers.css */
+
+/* Contenedor principal */
+.suppliers-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  background-color: #eaf4f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+
+.suppliers-container h2 {
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botón Agregar Proveedor */
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-button:hover {
+  background-color: #5D7C75;
+}
+
+/* Tabla de proveedores */
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.supplier-table th {
+  background-color: #85A89E;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.supplier-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #34495e;
+  vertical-align: middle;
+}
+
+.supplier-table tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+/* Botones de acción */
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.edit-button:hover {
+  color: #6B8F89;
+}
+
+.delete-button:hover {
+  color: #e74c3c;
+}
+
+/* Overlay genérico para modales */
+.modalProveedor-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenido del modal */
+.modalProveedor {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+/* Cabecera del modal */
+.modalProveedor > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modalProveedor h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 1.5rem;
+}
+
+/* Botón de cerrar */
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #6B8F89;
+}
+
+/* Inputs dentro del modal */
+.modalProveedor input {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto 0.75rem;   
+  padding: 0.4rem 0.86em;
+  margin-bottom: 0.5rem;
+  border: 1px solid #a8b9b3;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f1f5f3;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modalProveedor input:focus {
+  border-color: #85A89E;
+}
+
+/* Botones principales del modal */
+.modalProveedor button.primary {
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+  margin-right: 0.5rem;
+}
+
+.modalProveedor button.primary:hover {
+  background-color: #5D7C75;
+}
+
+/* Botón cancelar */
+.modalProveedor button.secondary {
+  background-color: #c0c0c0;
+  color: #34495e;
+}
+
+.modalProveedor button.secondary:hover {
+  background-color: #a8a8a8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .suppliers-container {
+    background-color: #d6e9e5;
+  }
+
+  .supplier-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .supplier-table,
+  .supplier-table tbody,
+  .supplier-table tr,
+  .supplier-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .supplier-table thead {
+    display: none;
+  }
+
+  .supplier-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .supplier-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .supplier-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .supplier-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Ocultar columna Email */
+  .supplier-table td[data-label="Email"],
+  .supplier-table th[data-label="Email"] {
+    display: none;
+  }
+
+  /* Ajuste botones en acciones */
+  .supplier-table td[data-label="Acciones"] > button {
+    margin: 0;
+    padding: 0.2rem;
+  }
+}
+
+
+
+/* Responsive completo para pantallas menores a 480px */
+@media (max-width: 480px) {
+  .suppliers-container {
+    background-color: #d6e9e5;
+  }
+
+  .supplier-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .supplier-table,
+  .supplier-table tbody,
+  .supplier-table tr,
+  .supplier-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .supplier-table thead {
+    display: none;
+  }
+
+  .supplier-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto; /* centra la card y margen inferior */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .supplier-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .supplier-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .supplier-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Ocultar columna Email */
+  .supplier-table td[data-label="Email"],
+  .supplier-table th[data-label="Email"] {
+    display: none;
+  }
+
+  /* Ajuste botones en acciones */
+  .supplier-table td[data-label="Acciones"] > button {
+    margin: 8px;
+    padding: 0.2rem;
+  }
+
+  /* Modal adaptado */
+  .modalProveedor {
+    width: 90%;
+    max-width: 360px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .modalProveedor h2 {
+    font-size: 1.25rem;
+  }
+
+  .modalProveedor input,
+  .modalProveedor select {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .modalProveedor button.primary,
+  .modalProveedor button.secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .modalProveedor > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,22 @@
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+  }
+  
+
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+
+  body.sidebar-open .main-content {
+    margin-left: 150px;
+  }
+  
+  body.sidebar-closed .main-content {
+    margin-left: 0;
+  }

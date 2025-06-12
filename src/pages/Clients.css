@@ -1,0 +1,391 @@
+
+.clients-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  background-color: #eaf4f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.clients-container h2 {
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.add-button:hover {
+  background-color: #5D7C75;
+}
+
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.client-table th {
+  background-color: #85A89E;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.client-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #34495e;
+  vertical-align: middle;
+}
+
+.client-table tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+.edit-button,
+.delete-button,
+.view-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.edit-button:hover {
+  color: #6B8F89;
+}
+
+.delete-button:hover {
+  color: #e74c3c;
+}
+
+.view-button:hover {
+  color: #2980b9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.modal > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal h2 {
+  margin: 0;
+  color: #34495e;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #6B8F89;
+}
+
+.modal input,
+.modal select {
+  display: block;             
+  width: 80%;               
+  max-width: 400px;          
+  margin: 0 auto 0.75rem;   
+  padding: 0.4rem 0.86em;
+  margin-bottom: 0.5rem;
+  border: 1px solid #a8b9b3;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f1f5f3;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal input:focus,
+.modal select:focus {
+  border-color: #85A89E;
+}
+
+.modal .error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.modal button.primary {
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+
+.modal button.primary:hover {
+  background-color: #5D7C75;
+}
+
+
+.modal button.secondary {
+  background-color: #c0c0c0;
+  color: #34495e;
+}
+
+.modal button.secondary:hover {
+  background-color: #a8a8a8;
+}
+
+
+@media (max-width: 780px) {
+  .clients-container {
+    background-color: #d6e9e5;
+  }
+
+  .client-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .client-table,
+  .client-table tbody,
+  .client-table tr,
+  .client-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .client-table thead {
+    display: none;
+  }
+
+  .client-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+  .client-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .client-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .client-table td:last-child {
+    border-bottom: none;
+  }
+
+  .client-table td[data-label="Email"],
+  .client-table th[data-label="Email"] {
+    display: none;
+  }
+
+  .client-table td[data-label="Acciones"] {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding-left: 50%;
+    border-bottom: none;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 440px;
+    padding: 2rem 1.5rem;
+    border-radius: 0.85rem;
+  }
+
+  .modal h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal input,
+  .modal select {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .modal button.primary,
+  .modal button.secondary {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .clients-container {
+    background-color: #d6e9e5;
+  }
+
+  .client-table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .client-table,
+  .client-table tbody,
+  .client-table tr,
+  .client-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .client-table thead {
+    display: none;
+  }
+
+  .client-table tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto;  
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .client-table td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+  }
+
+  .client-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .client-table td:last-child {
+    border-bottom: none;
+  }
+
+  .client-table td[data-label="Email"],
+  .client-table th[data-label="Email"] {
+    display: none;
+  }
+
+  .client-table td[data-label="Acciones"] > button {
+  
+    margin: 0;
+    padding: 0.2rem;
+  }
+  
+  .modal {
+    width: 90%;
+    max-width: 360px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .modal h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal input,
+  .modal select {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .modal button.primary,
+  .modal button.secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

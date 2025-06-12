@@ -1,0 +1,406 @@
+
+.billing {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem;
+  background-color: #eaf4f2; 
+  min-height: 100vh;
+}
+
+.billing h1 {
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.billing > button {
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.billing > button:hover {
+  background-color: #2c3e50;
+}
+
+.billing table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.billing thead {
+  background-color: #6B8F89;
+  color: #fff;
+}
+
+.billing th,
+.billing td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.billing tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+.billing td button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+
+.billing td button:hover {
+  color: #2c3e50;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  transform: translate(10%);
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1050px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001; 
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+@media (max-width: 768px) {
+  .billing {
+    padding: 1.5rem;
+    background-color: #d6e9e5;
+    min-height: auto;
+  }
+
+  .billing h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .billing > button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .billing table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .billing table,
+  .billing tbody,
+  .billing tr,
+  .billing td {
+    display: block;
+    width: 100%;
+  }
+
+  .billing thead {
+    display: none;
+  }
+
+  .billing tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .billing td {
+    position: relative;
+    padding: 0.75rem 1.2rem 0.75rem 45%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  .billing td:nth-child(1)::before {
+    content: "Fecha";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(2)::before {
+    content: "Monto";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(3)::before {
+    content: "Estado";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(4)::before {
+    content: "Acciones";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:last-child {
+    border-bottom: none;
+  }
+
+  .billing td button {
+    margin: 0;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    transform: translate(0);
+    width: 90%;
+    max-width: 600px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-content input,
+  .modal-content select {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  .modal-content button.primary,
+  .modal-content button.secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-content > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .billing {
+    padding: 1rem;
+    background-color: #d6e9e5;
+    min-height: auto; 
+  }
+
+  .billing h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .billing > button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .billing table {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .billing table,
+  .billing tbody,
+  .billing tr,
+  .billing td {
+    display: block;
+    width: 100%;
+  }
+
+  .billing thead {
+    display: none;
+  }
+
+  .billing tr {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #6B8F89;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .billing td {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+  }
+
+
+  .billing td:nth-child(1)::before {
+    content: "Factura";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(2)::before {
+    content: "Cliente";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(3)::before {
+    content: "Fecha";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(4)::before {
+    content: "Total";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:nth-child(5)::before {
+    content: "Acciones";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6B8F89;
+    white-space: nowrap;
+  }
+
+  .billing td:last-child {
+    border-bottom: none;
+  }
+
+  .billing td button {
+    margin: 0;
+    padding: 0.2rem;
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    transform: translate(0);
+    width: 90%;
+    max-width: 360px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-content input,
+  .modal-content select {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .modal-content button.primary,
+  .modal-content button.secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-content > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

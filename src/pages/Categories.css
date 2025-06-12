@@ -1,0 +1,229 @@
+
+.categories-container {
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eaf4f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.categories-container h2 {
+  text-align: center;
+  color: #34495e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6B8F89;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  margin: 0 auto 1.5rem;
+}
+.add-button:hover {
+  background-color: #5D7C75;
+}
+
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+.category-table th,
+.category-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  color: #34495e;
+  text-align: left;
+}
+.category-table th {
+  background-color: #85A89E;
+  color: #fff;
+  font-weight: 600;
+}
+.category-table tbody tr:hover {
+  background-color: #f1f5f3;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #34495e;
+  transition: color 0.2s;
+}
+.edit-button:hover {
+  color: #ffa500;
+}
+.delete-button:hover {
+  color: #e74c3c;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modalCategoria {
+  position: fixed;
+  top: 10%;  
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1f5f3;  
+  padding: 1.25rem;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+
+.modalCategoria > h2 {
+  margin: 0 0 1rem;
+  color: #34495e;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+.modalCategoria .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #34495e;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.modalCategoria .close-button:hover {
+  color: #e74c3c;
+}
+
+.modalCategoria input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #a8b9b3;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f1f5f3;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.modalCategoria input:focus {
+  border-color: #85A89E;
+}
+
+
+.modalCategoria button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-right: 0.5rem;
+}
+.modalCategoria button.save {
+  background-color: #6B8F89;
+  color: #fff;
+}
+.modalCategoria button.save:hover {
+  opacity: 0.8;
+}
+.modalCategoria button.cancel {
+  background-color: #c0c0c0;
+  color: #34495e;
+}
+.modalCategoria button.cancel:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    padding: 1rem;
+  }
+  .categories-container h2 {
+    font-size: 1.5rem;
+  }
+  .add-button {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+  .category-table th,
+  .category-table td {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .modalCategoria {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .modalCategoria h2 {
+    font-size: 1.25rem;
+  }
+  .modalCategoria input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  .modalCategoria button {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .category-table th,
+  .category-table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .modalCategoria {
+    padding: 1rem;
+    width: 95%;
+  }
+  .modalCategoria input {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .modalCategoria button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
